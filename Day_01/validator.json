@@ -1,0 +1,8 @@
+{
+  "steps": [
+    { "command": "git init", "check": "output_contains", "value": "Initialized" },
+    { "command": "git add README.md", "check": "file_staged", "value": "README.md" },
+    { "command": "git commit -m", "check": "commits_min", "value": 1 },
+    { "command": "git log --oneline", "check": "output_not_empty", "value": "" }
+  ]
+}

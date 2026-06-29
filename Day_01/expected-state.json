@@ -1,0 +1,7 @@
+{
+  "branch": "main",
+  "minCommits": 1,
+  "requiredCommitMessageContains": "initial",
+  "requiredStagedFiles": [],
+  "requiredFiles": ["README.md"]
+}
