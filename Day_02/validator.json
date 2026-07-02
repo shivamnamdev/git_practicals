@@ -1,0 +1,60 @@
+
+{
+"steps": [
+{
+"command": "git init",
+"check": "output_contains",
+"value": "Initialized"
+},
+{
+"command": "git add python-pattern.py",
+"check": "file_staged",
+"value": "python-pattern.py"
+},
+{
+"command": "git commit -m \"Added initial python pattern\"",
+"check": "commits_min",
+"value": 1
+},
+{
+"command": "git diff",
+"check": "command_executed",
+"value": "git diff"
+},
+{
+"command": "git diff --staged",
+"check": "command_executed",
+"value": "git diff --staged"
+},
+{
+"command": "git commit -m \"Updated the python pattern\"",
+"check": "commit_message_contains",
+"value": "pattern"
+},
+{
+"command": "git commit -m \"Fixed the pattern\"",
+"check": "commit_message_contains",
+"value": "fixed"
+},
+{
+"command": "git add time.py",
+"check": "file_staged",
+"value": "time.py"
+},
+{
+"command": "git commit -m \"Updated pattern and added time file\"",
+"check": "commits_min",
+"value": 4
+},
+{
+"command": "git log --oneline",
+"check": "output_not_empty",
+"value": ""
+},
+{
+"command": "git show",
+"check": "command_executed",
+"value": "git show"
+}
+]
+}

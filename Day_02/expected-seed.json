@@ -1,0 +1,13 @@
+{
+"branch": "main",
+"minCommits": 4,
+"requiredCommitMessageContains": "pattern",
+"requiredStagedFiles": [],
+"requiredFiles": ["python-pattern.py", "time.py"],
+"requiredCommands": [
+"git diff",
+"git diff --staged",
+"git log --oneline",
+"git show"
+]
+}
